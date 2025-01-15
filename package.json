@@ -1,0 +1,13 @@
+{
+  "name": "firstinternet",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "prod": "cd web/app/themes/firstinternet && yarn && yarn build",
+    "dev": "cd web/app/themes/firstinternet && yarn && yarn dev"
+  },
+  "author": "Cameron Campbell",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {}
+}

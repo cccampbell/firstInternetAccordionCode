@@ -1,0 +1,23 @@
+.wp-block-accordion {
+  padding: 80px 0;
+  .accordion-block-heading {
+    margin-bottom: 60px;
+    .accordion-block-title {
+      font-size: 48px;
+    }
+  }
+  .accordion {
+    .accordion-item {
+      .accordion-button {
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .accordion-body {
+        padding: 24px 1.25rem;
+        > *:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
