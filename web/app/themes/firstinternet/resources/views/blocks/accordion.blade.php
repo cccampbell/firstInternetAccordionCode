@@ -7,17 +7,17 @@
       </div>
     </div>
     @if (have_rows('items'))
-      <div class="accordion">
+      <div class="accordion-fi rounded">
         @while (have_rows('items'))
           @php the_row() @endphp
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button bg-light collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ get_row_index() }}" aria-expanded="false" aria-controls="collapse{{ get_row_index() }}">
+              <button class="accordion-button bg-light p-4" type="button">
                 {{ get_sub_field('heading') }}
               </button>
             </h2>
-            <div id="collapse{{ get_row_index() }}" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
+            <div id="collapse{{ get_row_index() }}" class="accordion-content-wrapper" data-bs-parent="#accordionExample">
+              <div class="accordion-body p-4">
                 {!! get_sub_field('text') !!}
               </div>
             </div>

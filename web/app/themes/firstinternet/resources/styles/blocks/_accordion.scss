@@ -1,21 +1,57 @@
 .wp-block-accordion {
   padding: 80px 0;
+  overflow: hidden;
   .accordion-block-heading {
     margin-bottom: 60px;
     .accordion-block-title {
       font-size: 48px;
     }
   }
-  .accordion {
+  .accordion-fi {
+    --border-color: #00000021;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
     .accordion-item {
       .accordion-button {
         font-size: 18px;
         font-weight: bold;
+        overflow: hidden;
+        border-bottom: 1px solid var(--border-color);
+        &::after {
+          content: '+';
+          height: auto;
+          width: auto;
+          margin-left: auto;
+          font-size: 24px;
+        }
       }
-      .accordion-body {
-        padding: 24px 1.25rem;
-        > *:last-child {
-          margin-bottom: 0;
+      &:last-child {
+        .accordion-button {
+          border-bottom: none;
+        }
+      }
+      .accordion-content-wrapper {
+        height: 0;
+        transition: height 0.3s ease-in-out;
+        .accordion-body {
+          padding: 24px 1.25rem;
+          border-bottom: 1px solid var(--border-color);
+          > *:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      &.open {
+        .accordion-button {
+          &::after {
+            content: '-';
+          }
+        }
+        .accordion-content-wrapper {
+          height: var(--content-height);
+          .accordion-body {
+            display: block;
+          }
         }
       }
     }
