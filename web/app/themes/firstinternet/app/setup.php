@@ -7,6 +7,7 @@
 namespace App;
 
 use function Roots\bundle;
+use Illuminate\Support\Facades\Blade;
 
 /**
  * Register the theme assets.
@@ -124,3 +125,11 @@ add_action('widgets_init', function () {
 });
 
 add_action('act/init', 'register_acf_block_types');
+
+add_filter('wp_head', function () {
+    echo Blade::render('@livewireStyles');
+});
+
+add_filter('wp_footer', function () {
+    echo Blade::render('@livewireScripts');
+});

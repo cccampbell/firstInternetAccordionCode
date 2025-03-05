@@ -1,11 +1,14 @@
 import domReady from '@roots/sage/client/dom-ready';
 // Import Bootstrap
 import 'bootstrap';
+import Alpine from 'alpinejs';
 
 /**
  * Application entrypoint
  */
 domReady(async () => {
+  window.Alpine = Alpine;
+  Alpine.start();
   const initAccordions = () => {
     const accordions = document.querySelectorAll('.accordion-fi');
     accordions.forEach((accordion) => {
@@ -37,7 +40,7 @@ domReady(async () => {
       });
     });
   };
-  initAccordions();
+  // initAccordions();
 });
 
 /**

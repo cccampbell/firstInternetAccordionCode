@@ -36,7 +36,7 @@
         }
       }
       .accordion-content-wrapper {
-        height: 0;
+        // height: 0;
         transition: height 0.3s ease-in-out;
         .accordion-body {
           padding: var(--accordion-item-padding);
@@ -53,7 +53,7 @@
           }
         }
         .accordion-content-wrapper {
-          height: var(--content-height);
+          // height: var(--content-height);
           .accordion-body {
             display: block;
           }
